@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Edit user</title>
+</head>
+
+<body>
+    <%- include('../nav/header') %>
+        <form action="/update-user" method="POST">
+            <div class="form-wrap">
+                <div>
+                    <strong>Update User</strong>
+                </div>
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name" value="<%=datauser.Name%>">
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" value="<%=datauser.Email%>">
+                </div>
+                <div>
+                    <input type="text" value="<%=datauser.id%>" hidden name="id">
+                    <button type="submit">Update</button>
+                </div>
+            </div>
+        </form>
+</body>
+
+</html>
