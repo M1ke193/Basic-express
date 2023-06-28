@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>adduser</title>
+</head>
+
+<body>
+    <!-- too Lazy to code validating :))))))))))))))))) -->
+    <%- include('header') %>
+        <form action="/add-new-user" method="POST">
+            <div class="form-wrap">
+                <div>
+                    <strong>Create New User</strong>
+                </div>
+                <div>
+                    <label>Your name sir:</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label>Your email:</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <button type="submit">Add</button>
+                </div>
+            </div>
+        </form>
+</body>
+
+</html>
