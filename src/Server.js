@@ -1,6 +1,7 @@
 import express from 'express'
 import configviewengine from './configs/viewengine'
 import webroute from './route/web'
+import initapi from './route/api'
 require('dotenv').config();
 
 const app = express()
@@ -14,6 +15,8 @@ app.use(express.json())
 configviewengine(app)
 //config browse route cho web
 webroute(app)
+//thiet lap api
+initapi(app)
 
 app.listen(port, () => {
     console.log('Web da duoc mo o port 3000')
