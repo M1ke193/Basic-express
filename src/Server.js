@@ -17,7 +17,10 @@ configviewengine(app)
 webroute(app)
 //thiet lap api
 initapi(app)
-
+// error 404
+app.use((req, res) => {
+    res.render('404.ejs')
+})
 app.listen(port, () => {
     console.log('Web da duoc mo o port 3000')
 })

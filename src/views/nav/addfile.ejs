@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="js/main.js"></script>
+    <title>addfile</title>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/">Home</a>
+        <a href="/addUser">Add User</a>
+        <a href="/addfile" class="active">Add File</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+    </div>
+    <form action="/addsinglefile" method="POST" enctype="multipart/form-data">
+        <div class="form-wrap">
+            <div>
+                <strong>Upload image file</strong>
+            </div>
+            <input type="file" name="profile_pic" onchange="loadNewAvatar(event)">
+            <div>
+                <button type="submit">Upload</button>
+            </div>
+        </div>
+    </form>
+    <img class="image" src="/image/download.jpg">
+    <hr style="height:2px;color:gray;background-color:gray; margin: 15px">
+
+    <form action="/addmutilfiles" method="POST" enctype="multipart/form-data">
+        <div class="form-wrap">
+            <div>
+                <strong>Upload mutilple file</strong>
+            </div>
+            <input type="file" name="mutilple_pic" multiple>
+            <div>
+                <button type="submit">Upload</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

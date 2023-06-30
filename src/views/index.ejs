@@ -11,41 +11,47 @@
 </head>
 
 <body>
-    <%- include('nav/header') %>
-        <div style="padding: 30px;">
-            <h2>List User</h2>
-            <table class="w3-table-all">
-                <thead>
-                    <tr class="w3-red">
-                        <th>id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <% for(let i=0;i<datauser.length;i++) { %>
-                    <tr>
-                        <td>
-                            <%=datauser[i].id %>
-                        </td>
-                        <td>
-                            <%=datauser[i].Name %>
-                        </td>
-                        <td>
-                            <%=datauser[i].Email %>
-                        </td>
-                        <td>
-                            <a href="/detail/user/<%=datauser[i].id %>"><button type="button">Details</button></a>
-                            <a href="/edit-user/<%=datauser[i].id %>"><button type="submit">Edit</button></a>
-                            <form class="form-delete" action="/delete-user" method="POST">
-                                <button type="submit">Delete</button>
-                                <input type="text" name="id" hidden value="<%=datauser[i].id%>">
-                            </form>
-                        </td>
-                    </tr>
-                    <% } %>
-            </table>
-        </div>
+    <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/addUser">Add User</a>
+        <a href="/addfile">Add File</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+    </div>
+    <div style="padding: 30px;">
+        <h2>List User</h2>
+        <table class="w3-table-all">
+            <thead>
+                <tr class="w3-red">
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <% for(let i=0;i<datauser.length;i++) { %>
+                <tr>
+                    <td>
+                        <%=datauser[i].id %>
+                    </td>
+                    <td>
+                        <%=datauser[i].Name %>
+                    </td>
+                    <td>
+                        <%=datauser[i].Email %>
+                    </td>
+                    <td>
+                        <a href="/detail/user/<%=datauser[i].id %>"><button type="button">Details</button></a>
+                        <a href="/edit-user/<%=datauser[i].id %>"><button type="submit">Edit</button></a>
+                        <form class="form-delete" action="/delete-user" method="POST">
+                            <button type="submit">Delete</button>
+                            <input type="text" name="id" hidden value="<%=datauser[i].id%>">
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
 </body>
 
 </html>

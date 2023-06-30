@@ -11,25 +11,31 @@
 
 <body>
     <!-- too Lazy to code validating :))))))))))))))))) -->
-    <%- include('header') %>
-        <form action="/add-new-user" method="POST">
-            <div class="form-wrap">
-                <div>
-                    <strong>Create New User</strong>
-                </div>
-                <div>
-                    <label>Your name sir:</label>
-                    <input type="text" name="name">
-                </div>
-                <div>
-                    <label>Your email:</label>
-                    <input type="email" name="email">
-                </div>
-                <div>
-                    <button type="submit">Add</button>
-                </div>
+    <div class="topnav" id="myTopnav">
+        <a href="/">Home</a>
+        <a href="/addUser" class="active">Add User</a>
+        <a href="/addfile">Add File</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+    </div>
+    <form action="/add-new-user" method="POST">
+        <div class="form-wrap">
+            <div>
+                <strong>Create New User</strong>
             </div>
-        </form>
+            <div>
+                <label>Your name sir:</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label>Your email:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <button type="submit">Add</button>
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>

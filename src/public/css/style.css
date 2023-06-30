@@ -78,3 +78,24 @@ body {
 .form-delete {
     display: inline;
 }
+
+.image {
+    display: block;
+    margin-left: 25px;
+    width: 250px;
+    height: 200px;
+}
+
+.Error {
+    color: rgb(225, 255, 0);
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.video {
+    width: 1200px;
+    height: 600px;
+    display: block;
+    margin: auto;
+}
