@@ -8,7 +8,7 @@ let getHomepage = async (req, res) => {
 let getdetailuser = async (req, res) => {
     let id = req.params.id
     const [user] = await pool.execute(`SELECT * from user where id = ?`, [id])
-    return res.send(user)
+    return res.render('action/detailuser.ejs', { datauser: user[0] })
 }
 
 let addUserpage = (req, res) => {

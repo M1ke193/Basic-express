@@ -1,4 +1,5 @@
 import pool from '../configs/connectData'
+var approot = require('app-root-path')
 
 let getuserapi = async (req, res) => {
 
@@ -42,6 +43,20 @@ let deleteuserapi = async (req, res) => {
         message: "Delete user successful",
     })
 }
+
+
+let singlefileapi = (req, res) => {
+    return res.status(200).json({
+        message: "File uploaded successful",
+    })
+}
+
+let mutilfileapi = (req, res) => {
+    return res.status(200).json({
+        message: "Files uploaded successful",
+    })
+}
+
 module.exports = {
-    getuserapi, adduserapi, updateuserapi, deleteuserapi
+    getuserapi, adduserapi, updateuserapi, deleteuserapi, singlefileapi, mutilfileapi
 }
